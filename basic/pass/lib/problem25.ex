@@ -6,4 +6,8 @@ defmodule Problem25 do
   키가 존재하지 않으면 `{:error, :key_not_found}` 튜플을 반환합니다.
   """
   # 여기에 safe_map_access/2 함수를 구현하세요.
+  @spec safe_map_access(map, any) :: {:ok, any} | {:error, :key_not_found}
+
+  def safe_map_access(map, key) when is_map_key(map, key), do: {:ok, Map.get(map, key)}
+  def safe_map_access(_, _), do: {:error, :key_not_found}
 end

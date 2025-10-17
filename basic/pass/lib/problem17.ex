@@ -7,4 +7,8 @@ defmodule Problem17 do
   0! = 1
   """
   # 여기에 factorial/1 함수를 재귀와 패턴 매칭을 사용하여 구현하세요.
+  @spec factorial(non_neg_integer()) :: non_neg_integer()
+
+  def factorial(number) when number > 0, do: number * factorial(number-1)
+  def factorial(0), do: 1
 end

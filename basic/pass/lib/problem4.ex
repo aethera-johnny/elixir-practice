@@ -5,4 +5,9 @@ defmodule Problem4 do
   0으로 나누는 경우 에러를 발생시키거나 특정 값을 반환하는 등의 처리는 하지 않습니다.
   """
   # 여기에 divide/2 함수를 구현하세요.
+  @spec divide(number, number) :: number
+
+  def divide(a, b) do
+    Float.round(a / b, 10)
+  end
 end

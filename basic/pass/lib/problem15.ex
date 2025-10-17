@@ -4,4 +4,7 @@ defmodule Problem15 do
   리스트가 비어있으면 `nil`을 반환합니다.
   """
   # 여기에 last_element/1 함수를 구현하세요.
+  @spec last_element(list(any)) :: any
+
+  def last_element(list), do: List.last(list)
 end

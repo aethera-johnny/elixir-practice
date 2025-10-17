@@ -4,4 +4,9 @@ defmodule Problem5 do
   즉, `base`의 `exponent` 제곱을 계산합니다.
   """
   # 여기에 power/2 함수를 구현하세요.
+  @spec power(number, number) :: number
+
+  def power(a, b) do
+    a ** b
+  end
 end

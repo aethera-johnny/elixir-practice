@@ -8,4 +8,8 @@ defmodule Problem18 do
   F(n) = F(n-1) + F(n-2) (n > 1)
   """
   # 여기에 fibonacci/1 함수를 재귀를 사용하여 구현하세요.
+  @spec fibonacci(non_neg_integer()) :: non_neg_integer()
+
+  def fibonacci(number) when number < 2, do: number
+  def fibonacci(number), do: fibonacci(number - 1) + fibonacci(number - 2)
 end
